@@ -31,17 +31,6 @@ Tkinter Quadratic Equation Calculator: A simple application for calculating the 
 - **Python 3.12**: Ensure you have Python 3.12 installed.
 - **Tkinter**: Typically included with Python installations.
 
-## Adding the .exe File
-
-To create an executable (.exe) file from the quadratic equation calculator application, the **PyInstaller** tool was used. The .exe file is now available in the `dist` folder.
-
-The following steps were taken:
-1. Installed **PyInstaller** (if not previously installed).
-2. Used the command `pyinstaller --onefile quadratic_calculator.py` to generate the .exe file.
-3. Updated the project structure by removing unnecessary build files and the .spec file.
-
-The .exe file is accessible in the repository and can be run on Windows systems.
-
 ## Installation
 1. Clone the repository:
    ```bash
