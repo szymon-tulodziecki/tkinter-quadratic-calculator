@@ -77,8 +77,13 @@ def calculate_and_reset(entry_a, entry_b, entry_c, instruction_label):
         b = float(entry_b.get())
         c = float(entry_c.get())
 
-        if a == 0:
-            outcome = "Coefficient a cannot be 0"
+        if a == 0 and b != 0 and c != 0:
+            outcome = f"Linear equation. x = {-c/b}"
+        elif a == 0 and b == 0 and c != 0:
+            outcome = "No solutions. Contradictory equation"
+        elif a == 0 and b == 0 and c == 0:
+            outcome = "Identity equation 0 = 0"
+
         else:
             delta = pow(b, 2) - 4 * a * c
             sqrt_delta = cmath.sqrt(delta)
@@ -113,7 +118,7 @@ def calculate_and_reset(entry_a, entry_b, entry_c, instruction_label):
     reset_button = tk.Button(button_frame, text="Reset", command=reset, bg='light grey', width=15, height=2)
     reset_button.pack(side=tk.LEFT, padx=(10, 5), pady=(0, 0))  # Ustawiony odstęp pionowy
 
-    calc_button = tk.Button(button_frame, text="Oblicz", command=calculate, bg='light grey', width=15, height=2)
+    calc_button = tk.Button(button_frame, text="Calculate", command=calculate, bg='light grey', width=15, height=2)
     calc_button.pack(side=tk.LEFT, padx=(5, 10), pady=(0, 0))  # Ustawiony odstęp pionowy
 
 
